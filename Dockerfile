@@ -16,9 +16,10 @@ ENV AUTOPURGE_PURGEINTERVAL="org.apache.zookeeper.server.auth.SASLAuthentication
 
 COPY docker-entrypoint.sh /
 
-RUN chmod 600 /conf/jmxremote.* && chown -R zookeeper:zookeeper /conf && chown -R 501:dialout /zookeeper-3.4.13/bin/* &&\
+RUN chmod 600 /conf/jmxremote.* && \
+    chown -R zookeeper:zookeeper /conf && \
+    chown -R 501:dialout /zookeeper-3.4.13/bin/* && \
     chmod 755 /docker-entrypoint.sh && chmod 755 /zookeeper-3.4.13/bin/*
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["zkServer.sh", "start-foreground"]
-
