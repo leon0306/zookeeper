@@ -72,7 +72,7 @@ then
     echo "ZooKeeper remote JMX Port set to $JMXPORT" >&2
     echo "ZooKeeper remote JMX HOST set to $JMXHOST" >&2
     echo "ZooKeeper remote JMX authenticate set to $JMXAUTH" >&2
-	echo "ZooKeeper authenticate file in /conf" >&2
+    echo "ZooKeeper authenticate file in /conf" >&2
     echo "ZooKeeper remote JMX ssl set to $JMXSSL" >&2
     echo "ZooKeeper remote JMX log4j set to $JMXLOG4J" >&2
 
